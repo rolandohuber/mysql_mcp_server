@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "{name}-mysql-server": {
+      "command": "node",
+      "args": ["<path to dist>/dist/main.js"],
+      "env": {
+        "DB_HOST": "",
+        "DB_PORT": "",
+        "DB_USER": "",
+        "DB_PASSWORD": "",
+        "DB_NAME": "",
+        "MCP_MODE": "stdio"
+      }
+    }
+  }
+}
