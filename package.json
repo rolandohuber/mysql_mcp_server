@@ -10,8 +10,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "dev": "MCP_PORT=4000 DB_HOST=localhost DB_PORT=3306 DB_USER=root DB_PASSWORD=Pepe123456* DB_NAME=test MCP_MODE=stdio ts-node --esm src/main.ts",
-    "test": "MCP_PORT=4000 DB_HOST=localhost DB_PORT=3306 DB_USER=root DB_PASSWORD=Pepe123456* DB_NAME=test MCP_MODE=stdio jest",
+    "dev": "MCP_PORT=4000 DB_HOST=localhost DB_PORT=3306 DB_USER=root DB_PASSWORD=test DB_NAME=test MCP_MODE=stdio ts-node --esm src/main.ts",
+    "test": "MCP_PORT=4000 DB_HOST=localhost DB_PORT=3306 DB_USER=root DB_PASSWORD=test DB_NAME=test MCP_MODE=stdio jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.ts",
