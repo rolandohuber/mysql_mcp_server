@@ -1,6 +1,6 @@
 {
   "name": "@rolandohuber/mysql-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive MCP server for MySQL database operations with 16 tools, multi-transport support, and intelligent test data generation",
   "type": "module",
   "main": "dist/main.js",

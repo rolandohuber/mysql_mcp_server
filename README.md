@@ -40,18 +40,18 @@ This section is for users who want to use the MySQL MCP Server with their MCP cl
 The MySQL MCP Server can be used directly with `npx` without any installation:
 
 ```bash
-# Option 1: Direct usage (no installation required)
-npx @rolandohuber/mysql-mcp-server --help
+    # Option 1: Direct usage (no installation required)
+    npx @rolandohuber/mysql-mcp-server --help
 ```
 
 **Optional:** Install globally for faster execution:
 
 ```bash
-# Option 2: Install globally (optional, for better performance)
-npm install -g @rolandohuber/mysql-mcp-server
+    # Option 2: Install globally (optional, for better performance)
+    npm install -g @rolandohuber/mysql-mcp-server
 
-# Then verify the installation
-npx @rolandohuber/mysql-mcp-server --help
+    # Then verify the installation
+    npx @rolandohuber/mysql-mcp-server --help
 ```
 
 ## MCP Configuration
@@ -60,17 +60,17 @@ npx @rolandohuber/mysql-mcp-server --help
 
 **macOS:**
 ```bash
-~/.codeium/windsurf/mcp_config.json
+    ~/.codeium/windsurf/mcp_config.json
 ```
 
 **Windows:**
 ```bash
-%APPDATA%\Codeium\Windsurf\mcp_config.json
+    %APPDATA%\Codeium\Windsurf\mcp_config.json
 ```
 
 **Linux:**
 ```bash
-~/.config/codeium/windsurf/mcp_config.json
+    ~/.config/codeium/windsurf/mcp_config.json
 ```
 
 ### Add the server configuration:
@@ -181,15 +181,15 @@ This section is for developers who want to modify, extend, or contribute to the 
 ### Clone and Setup
 
 ```bash
-# Clone the repository
-git clone <repository-url>
-cd mysql-mcp-server
-
-# Install dependencies
-npm install
-
-# Build the project
-npm run build
+    # Clone the repository
+    git clone <repository-url>
+    cd mysql-mcp-server
+    
+    # Install dependencies
+    npm install
+    
+    # Build the project
+    npm run build
 ```
 
 ### Environment Configuration
@@ -197,7 +197,7 @@ npm run build
 Copy the example environment file:
 
 ```bash
-cp .env.example .env
+  cp .env.example .env
 ```
 
 Edit `.env` with your development database credentials:
@@ -222,24 +222,24 @@ DEBUG=true
 
 #### Stdio Mode (for MCP clients)
 ```bash
-npm start
-# or
-MCP_MODE=stdio npm start
+  npm start
+  # or
+  MCP_MODE=stdio npm start
 ```
 
 #### WebSocket Mode
 ```bash
-MCP_MODE=websocket npm start
+  MCP_MODE=websocket npm start
 ```
 
 #### HTTP Mode
 ```bash
-MCP_MODE=http npm start
+  MCP_MODE=http npm start
 ```
 
 #### Development with auto-reload
 ```bash
-npm run dev
+  npm run dev
 ```
 
 ## Project Structure
@@ -290,14 +290,14 @@ export async function handleMyNewTool(args: any): Promise<any> {
 The project includes comprehensive tests:
 
 ```bash
-# Run all tests
-npm test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests in watch mode
-npm run test:watch
+    # Run all tests
+    npm test
+    
+    # Run tests with coverage
+    npm run test:coverage
+    
+    # Run tests in watch mode
+    npm run test:watch
 ```
 
 ### Test Categories
@@ -311,7 +311,7 @@ npm run test:watch
 The project uses TypeScript with strict type checking. Run the linter:
 
 ```bash
-npm run lint
+  npm run lint
 ```
 
 ## Deployment
