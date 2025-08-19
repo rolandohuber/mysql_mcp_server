@@ -13,13 +13,14 @@ export let testMysqlService: MysqlService;
 
 beforeAll(async () => {
   try {
+    console.log('-------------', testConfig)
     // First try to connect to MySQL server without specifying a database
     const adminService = new MysqlService({
-      host: testConfig.host,
-      port: testConfig.port,
-      user: testConfig.user,
-      password: testConfig.password,
-      // Don't specify database initially
+      host: testConfig.host || '',
+      port: parseInt(testConfig.port || '0') || 0,
+      user: testConfig.user || '',
+      password: testConfig.password || '',
+      database: testConfig.database || ''
     });
     
     await adminService.connect();
@@ -30,7 +31,13 @@ beforeAll(async () => {
     await adminService.disconnect();
     
     // Now connect to the test database
-    testMysqlService = new MysqlService(testConfig);
+    testMysqlService = new MysqlService({
+      host: testConfig.host || '',
+      port: parseInt(testConfig.port || '0') || 0,
+      user: testConfig.user || '',
+      password: testConfig.password || '',
+      database: testConfig.database || ''
+    });
     await testMysqlService.connect();
     
     // Create test tables
@@ -51,7 +58,13 @@ beforeAll(async () => {
     
     // Try to connect to existing database
     try {
-      testMysqlService = new MysqlService(testConfig);
+      testMysqlService = new MysqlService({
+        host: testConfig.host || '',
+        port: parseInt(testConfig.port || '0') || 0,
+        user: testConfig.user || '',
+        password: testConfig.password || '',
+        database: testConfig.database || ''
+      });
       await testMysqlService.connect();
       console.log(`✓ Connected to existing database '${testConfig.database}'`);
     } catch (connectionError) {

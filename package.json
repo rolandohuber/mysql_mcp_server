@@ -2,6 +2,7 @@
   "name": "@rolandohuber/mysql-mcp-server",
   "version": "1.0.0",
   "description": "A comprehensive MCP server for MySQL database operations with 16 tools, multi-transport support, and intelligent test data generation",
+  "type": "module",
   "main": "dist/main.js",
   "bin": {
     "mysql-mcp-server": "dist/main.js"
@@ -9,8 +10,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/main.js",
-    "dev": "ts-node src/main.ts",
-    "test": "jest",
+    "dev": "MCP_PORT=4000 DB_HOST=localhost DB_PORT=3306 DB_USER=root DB_PASSWORD=Pepe123456* DB_NAME=test MCP_MODE=stdio ts-node --esm src/main.ts",
+    "test": "MCP_PORT=4000 DB_HOST=localhost DB_PORT=3306 DB_USER=root DB_PASSWORD=Pepe123456* DB_NAME=test MCP_MODE=stdio jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "lint": "eslint src/**/*.ts",

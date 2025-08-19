@@ -1,14 +1,16 @@
 {
   "mcpServers": {
-    "{name}-mysql-server": {
+    "agro-mysql-server": {
       "command": "node",
-      "args": ["<path to dist>/dist/main.js"],
+      "args": [
+        "/Users/roland/mysql_mcp_server/dist/main.js"
+      ],
       "env": {
-        "DB_HOST": "",
-        "DB_PORT": "",
-        "DB_USER": "",
-        "DB_PASSWORD": "",
-        "DB_NAME": "",
+        "DB_HOST": "127.0.0.1",
+        "DB_PORT": "3306",
+        "DB_USER": "root",
+        "DB_PASSWORD": "Pepe123456*",
+        "DB_NAME": "agro_desarrollo",
         "MCP_MODE": "stdio"
       }
     }

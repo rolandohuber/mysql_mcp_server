@@ -2,10 +2,10 @@
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js';
-import { MysqlService } from './services/MysqlService';
-import { getDatabaseConfig, getServerConfig } from './config/database';
-import { StdioAdapter, WebSocketAdapter, HttpAdapter } from './adapters/index';
-import * as tools from './tools/index';
+import { MysqlService } from './services/MysqlService.js';
+import { getDatabaseConfig, getServerConfig } from './config/database.js';
+import { StdioAdapter, WebSocketAdapter, HttpAdapter } from './adapters/index.js';
+import * as tools from './tools/index.js';
 
 class MySQLMCPServer {
   private server: Server;
